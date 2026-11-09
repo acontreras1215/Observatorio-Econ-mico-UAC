@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Observatorio Económico UAC</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#f4f6f9;
+}
+
+header{
+background:#003366;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.card h3{
+margin-top:0;
+color:#003366;
+}
+
+.valor{
+font-size:28px;
+font-weight:bold;
+color:#0066cc;
+}
+
+.fecha{
+font-size:12px;
+color:#666;
+}
+
+button{
+background:#003366;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.seccion{
+background:white;
+padding:20px;
+margin-top:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+</style>
+
 </head>
 
 <body>
+
+<header>
 
 <h1>📊 Observatorio Económico UAC</h1>
 
@@ -13,15 +89,96 @@
 Laboratorio de Actualidad Económica
 </p>
 
-<h2>Indicadores Estratégicos</h2>
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h3>📈 Inflación</h3>
+<p class="valor">--%</p>
+<p class="fecha">Actualización pendiente</p>
+<p>Indicador de variación de precios.</p>
+<button>🤖 Analizar</button>
+</div>
+
+<div class="card">
+<h3>💵 Tasa BanRep</h3>
+<p class="valor">--%</p>
+<p class="fecha">Actualización pendiente</p>
+<p>Tasa de intervención del Banco de la República.</p>
+<button>🤖 Analizar</button>
+</div>
+
+<div class="card">
+<h3>💲 TRM</h3>
+<p class="valor">$ ----</p>
+<p class="fecha">Actualización pendiente</p>
+<p>Tasa Representativa del Mercado.</p>
+<button>🤖 Analizar</button>
+</div>
+
+<div class="card">
+<h3>📉 PIB</h3>
+<p class="valor">--%</p>
+<p class="fecha">Actualización pendiente</p>
+<p>Crecimiento económico nacional.</p>
+<button>🤖 Analizar</button>
+</div>
+
+<div class="card">
+<h3>👨‍💼 Desempleo</h3>
+<p class="valor">--%</p>
+<p class="fecha">Actualización pendiente</p>
+<p>Tasa de desempleo nacional.</p>
+<button>🤖 Analizar</button>
+</div>
+
+</div>
+
+<div class="seccion">
+
+<h2>📰 Coyuntura Económica</h2>
+
+<p>
+Aquí aparecerán noticias económicas relevantes para el análisis académico.
+</p>
+
+</div>
+
+<div class="seccion">
+
+<h2>🏦 Fuentes Oficiales</h2>
 
 <ul>
-<li>📈 Inflación</li>
-<li>💵 Tasa de Intervención</li>
-<li>💲 TRM</li>
-<li>📉 PIB</li>
-<li>👨‍💼 Desempleo</li>
+
+<li>Banco de la República</li>
+
+<li>DANE</li>
+
+<li>Superintendencia Financiera</li>
+
+<li>FMI</li>
+
+<li>Banco Mundial</li>
+
 </ul>
 
+</div>
+
+<div class="seccion">
+
+<h2>🤖 MonetaBot UAC</h2>
+
+<p>
+Próximamente se integrará el análisis académico automatizado de indicadores económicos.
+</p>
+
+</div>
+
+</div>
+
 </body>
+
 </html>
