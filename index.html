@@ -67,6 +67,10 @@ border-radius:8px;
 cursor:pointer;
 }
 
+button:hover{
+background:#0055aa;
+}
+
 .seccion{
 background:white;
 padding:20px;
@@ -111,27 +115,25 @@ Laboratorio de Actualidad Económica
 <button>🤖 Analizar</button>
 </div>
 
-<div class="tarjeta">
+<div class="card">
 
-    <h3>💲 TRM</h3>
+<h3>💲 TRM</h3>
 
-    <p class="valor" id="trm">
-        $ ----
-    </p>
+<p class="valor" id="trm">
+$ ----
+</p>
 
-    <p class="fecha" id="fechaTrm">
-        Actualización pendiente
-    </p>
+<p class="fecha" id="fechaTrm">
+Actualización pendiente
+</p>
 
-    <p id="interpretacionTrm">
-        Cargando información...
-    </p>
+<p id="interpretacionTrm">
+Cargando información...
+</p>
 
-    <button onclick="analizarTRM()">
-        🤖 Analizar
-    </button>
-
-</div>
+<button onclick="analizarTRM()">
+🤖 Analizar
+</button>
 
 </div>
 
@@ -168,17 +170,11 @@ Aquí aparecerán noticias económicas relevantes para el análisis académico.
 <h2>🏦 Fuentes Oficiales</h2>
 
 <ul>
-
 <li>Banco de la República</li>
-
 <li>DANE</li>
-
 <li>Superintendencia Financiera</li>
-
 <li>FMI</li>
-
 <li>Banco Mundial</li>
-
 </ul>
 
 </div>
@@ -194,6 +190,32 @@ Próximamente se integrará el análisis académico automatizado de indicadores 
 </div>
 
 </div>
+
+<script>
+
+const trmActual = 4210;
+
+document.getElementById("trm").innerHTML =
+"$ " + trmActual.toLocaleString("es-CO");
+
+document.getElementById("fechaTrm").innerHTML =
+"Actualizado: " +
+new Date().toLocaleDateString("es-CO");
+
+document.getElementById("interpretacionTrm").innerHTML =
+"Una TRM elevada favorece las exportaciones, pero incrementa el costo de las importaciones.";
+
+function analizarTRM(){
+
+alert(
+"ANÁLISIS TRM\n\n" +
+"Una TRM alta favorece a los exportadores colombianos porque reciben más pesos por cada dólar.\n\n" +
+"También encarece los bienes importados, lo que puede generar presiones inflacionarias."
+);
+
+}
+
+</script>
 
 </body>
 
