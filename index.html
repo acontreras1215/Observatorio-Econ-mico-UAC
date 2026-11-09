@@ -111,12 +111,26 @@ Laboratorio de Actualidad Económica
 <button>🤖 Analizar</button>
 </div>
 
-<div class="card">
-<h3>💲 TRM</h3>
-<p class="valor">$ ----</p>
-<p class="fecha">Actualización pendiente</p>
-<p>Tasa Representativa del Mercado.</p>
-<button>🤖 Analizar</button>
+<div class="tarjeta">
+
+    <h3>💲 TRM</h3>
+
+    <p class="valor" id="trm">
+        $ ----
+    </p>
+
+    <p class="fecha" id="fechaTrm">
+        Actualización pendiente
+    </p>
+
+    <p id="interpretacionTrm">
+        Cargando información...
+    </p>
+
+    <button onclick="analizarTRM()">
+        🤖 Analizar
+    </button>
+
 </div>
 
 <div class="card">
