@@ -1,222 +1,143 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Observatorio Económico UAC</title>
-
-<style>
-
-body{
-font-family:Arial,sans-serif;
-margin:0;
-background:#f4f6f9;
-}
-
-header{
-background:#003366;
-color:white;
-padding:25px;
-text-align:center;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.15);
-}
-
-.card h3{
-margin-top:0;
-color:#003366;
-}
-
-.valor{
-font-size:28px;
-font-weight:bold;
-color:#0066cc;
-}
-
-.fecha{
-font-size:12px;
-color:#666;
-}
-
-button{
-background:#003366;
-color:white;
-border:none;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
-}
-
-button:hover{
-background:#0055aa;
-}
-
-.seccion{
-background:white;
-padding:20px;
-margin-top:20px;
-border-radius:12px;
-box-shadow:0 2px 8px rgba(0,0,0,.15);
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<h1>📊 Observatorio Económico UAC</h1>
-
-<p>
-Laboratorio de Actualidad Económica
-</p>
-
-</header>
-
-<div class="container">
-
-<div class="grid">
-
-<div class="card">
-<h3>📈 Inflación</h3>
-<p class="valor">--%</p>
-<p class="fecha">Actualización pendiente</p>
-<p>Indicador de variación de precios.</p>
-<button>🤖 Analizar</button>
-</div>
-
-<div class="card">
-<h3>💵 Tasa BanRep</h3>
-<p class="valor">--%</p>
-<p class="fecha">Actualización pendiente</p>
-<p>Tasa de intervención del Banco de la República.</p>
-<button>🤖 Analizar</button>
-</div>
-
-<div class="card">
-
-<h3>💲 TRM</h3>
-
-<p class="valor" id="trm">
-$ ----
-</p>
-
-<p class="fecha" id="fechaTrm">
-Actualización pendiente
-</p>
-
-<p id="interpretacionTrm">
-Cargando información...
-</p>
-
-<button onclick="analizarTRM()">
-🤖 Analizar
-</button>
-
-</div>
-
-<div class="card">
-<h3>📉 PIB</h3>
-<p class="valor">--%</p>
-<p class="fecha">Actualización pendiente</p>
-<p>Crecimiento económico nacional.</p>
-<button>🤖 Analizar</button>
-</div>
-
-<div class="card">
-<h3>👨‍💼 Desempleo</h3>
-<p class="valor">--%</p>
-<p class="fecha">Actualización pendiente</p>
-<p>Tasa de desempleo nacional.</p>
-<button>🤖 Analizar</button>
-</div>
-
-</div>
-
-<div class="seccion">
-
-<h2>📰 Coyuntura Económica</h2>
-
-<p>
-Aquí aparecerán noticias económicas relevantes para el análisis académico.
-</p>
-
-</div>
-
-<div class="seccion">
-
-<h2>🏦 Fuentes Oficiales</h2>
-
-<ul>
-<li>Banco de la República</li>
-<li>DANE</li>
-<li>Superintendencia Financiera</li>
-<li>FMI</li>
-<li>Banco Mundial</li>
-</ul>
-
-</div>
-
-<div class="seccion">
-
-<h2>🤖 MonetaBot UAC</h2>
-
-<p>
-Próximamente se integrará el análisis académico automatizado de indicadores económicos.
-</p>
-
-</div>
-
-</div>
-
 <script>
 
-const trmActual = 4210;
+// ============================
+// DATOS OFICIALES OBSERVATORIO
+// ============================
+
+// TRM
+const trmActual = 3237.83;
+
+// Inflación
+const inflacionActual = 6.29;
+
+// Tasa BanRep
+const tasaBanRep = 12.25;
+
+// PIB
+const pibActual = 3.5;
+
+// Desempleo
+const desempleoActual = 8.0;
+
+
+// ============================
+// TRM
+// ============================
 
 document.getElementById("trm").innerHTML =
 "$ " + trmActual.toLocaleString("es-CO");
 
 document.getElementById("fechaTrm").innerHTML =
-"Actualizado: " +
-new Date().toLocaleDateString("es-CO");
+"Actualizado: 09/11/2026";
 
 document.getElementById("interpretacionTrm").innerHTML =
-"Una TRM elevada favorece las exportaciones, pero incrementa el costo de las importaciones.";
+"El peso colombiano mantiene una TRM cercana a $3.238 por dólar. Un dólar más alto favorece exportadores y encarece importaciones.";
+
+
+// ============================
+// ANALISIS TRM
+// ============================
 
 function analizarTRM(){
 
 alert(
-"ANÁLISIS TRM\n\n" +
-"Una TRM alta favorece a los exportadores colombianos porque reciben más pesos por cada dólar.\n\n" +
-"También encarece los bienes importados, lo que puede generar presiones inflacionarias."
+"TRM: $3.237,83\n\n" +
+
+"Impacto académico:\n\n" +
+
+"• Favorece exportadores.\n" +
+
+"• Incrementa costos de importación.\n" +
+
+"• Influye sobre inflación y competitividad.\n\n" +
+
+"Relacionada con:\n" +
+
+"Finanzas Internacionales\n" +
+
+"Mercado Cambiario\n" +
+
+"Moneda y Banca"
+);
+
+}
+
+
+// ============================
+// ANALISIS INFLACION
+// ============================
+
+function analizarInflacion(){
+
+alert(
+"Inflación anual: 6,29%\n\n" +
+
+"• Reduce poder adquisitivo.\n" +
+
+"• Influye en tasas de interés.\n" +
+
+"• Afecta consumo y ahorro.\n\n" +
+
+"Relacionada con la Unidad de Dinero e Inflación."
+);
+
+}
+
+
+// ============================
+// ANALISIS BANREP
+// ============================
+
+function analizarBanrep(){
+
+alert(
+"Tasa BanRep: 12,25%\n\n" +
+
+"• Principal instrumento de política monetaria.\n" +
+
+"• Busca controlar la inflación.\n" +
+
+"• Influye sobre créditos y ahorro."
+);
+
+}
+
+
+// ============================
+// ANALISIS PIB
+// ============================
+
+function analizarPIB(){
+
+alert(
+"PIB: 3,5%\n\n" +
+
+"• Refleja crecimiento económico.\n" +
+
+"• Indica expansión moderada de la economía.\n" +
+
+"• Impacta empleo e inversión."
+);
+
+}
+
+
+// ============================
+// ANALISIS DESEMPLEO
+// ============================
+
+function analizarDesempleo(){
+
+alert(
+"Desempleo: 8,0%\n\n" +
+
+"• Mide la población que busca trabajo y no lo encuentra.\n" +
+
+"• Refleja condiciones del mercado laboral.\n" +
+
+"• Impacta ingreso y consumo."
 );
 
 }
 
 </script>
-
-</body>
-
-</html>
